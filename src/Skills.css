@@ -45,7 +45,7 @@
     margin-left: -15%;
     text-align: center;
     font-size: 45px;
-    animation-timeline: view();
+    animation-timeline: view(30% 0%);
     animation-name: midBlur;
     animation-fill-mode: both;
 }
