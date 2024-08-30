@@ -1,0 +1,97 @@
+.Navbar{
+    position: relative;
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    align-items: center;
+}
+
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+.Name{
+    text-align: left;
+    flex:1;
+    font-family: "Inconsolata", monospace;
+    font-size: 20px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 10;
+    background: linear-gradient(-45deg, #d4d4d4, #aed7ff, #77bbff, #54aaff);
+    background-size: 400% 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 2s ease infinite;
+}
+
+.NavOpt{
+    font-family: "Inconsolata", monospace;
+    font-size: 20px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 10;
+    color:#b1beca;
+    margin-left: 5%;
+}
+
+.LinkdIn{
+  margin-left: 5%;
+}
+
+.LinkdIn a{
+    text-decoration: none;
+    font-family: "Inconsolata", monospace;
+    font-size: 20px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 10;
+    color:#1692ff;
+}
+
+#Active{
+    color: #eaeaea;
+    font-size: 20px;
+}
+
+.Navbar::after{
+    position: absolute;
+    left: 10%;
+    bottom:0%;
+    content: "";
+    width: 80%;
+    height: 1px;
+    background-color: rgb(174, 174, 174);
+
+}
+
+@media (max-width:700px){
+  .LinkdIn a{
+      font-size: 10px;
+  }
+
+  #Active{
+    font-size: 10px;
+  }
+
+  .NavOpt{
+    font-size: 10px;
+  }
+
+  .Name{
+    font-size: 10px;
+  }
+}

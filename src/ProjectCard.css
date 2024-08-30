@@ -1,0 +1,88 @@
+.CardContainer{
+    /* transform-style: preserve-3d; */
+    /* perspective: 3000px; */
+    width: 20%;
+    height: 60vh;
+}
+
+.ProjectCard{
+    position:relative;
+    border-radius: 30px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(17, 29, 38);
+    transition: transform 0.3s linear, opacity 0.15s linear;
+}
+
+.CardContainer:hover .ProjectCard{
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+
+.CardContainer:hover .Details{
+    transform: rotateY(360deg);
+}
+
+.ImageContainer{
+    flex: 2;
+    /* background-image: url('./image.png'); */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+}
+
+.TextualArea{
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 10;
+    flex: 1;
+    color: #ffffff;
+}
+
+.ProjectName{
+    font-size: 50px;
+    color: #4ec7ff;
+    text-shadow: 0px 0px 15px #6898be;
+}
+
+.ProjectDescription{
+    font-size: 25px;
+}
+
+.Details{
+    background-color: rgb(17, 29, 38);
+    border-radius: 30px;
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-variation-settings: "wdth" 10;
+    transition: transform 0.3s linear;
+}
+
+.Details p{
+    padding: 5%;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+.Details a{
+    text-decoration: none;
+    color: #3bb3db;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    font-size: 25px;
+}

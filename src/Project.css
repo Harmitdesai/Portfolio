@@ -1,0 +1,117 @@
+.Projects{
+    margin-top: 20%;
+    display: inline-block;
+    margin-left: 40%;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+@keyframes RotateProject{
+    0%{
+        transform: rotateY(0deg) rotateX(0deg);
+    } 25% {
+        transform: rotateY(5deg) rotateX(5deg);
+    } 50% {
+        transform: rotateY(0deg) rotateX(0deg);
+    } 75% {
+        transform: rotateY(-5deg) rotateX(-5deg);
+    } 100% {
+        transform: rotateY(0deg) rotateX(0deg);
+    }
+}
+
+.Projects p{
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings: "wdth" 10;
+    font-size: 5vw;
+    background: linear-gradient(90deg, #ffffff, #008ffd);
+    background-size: 100%;
+    height: auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: RotateProject 2s linear infinite both;
+}
+
+.Projects::after{
+    content: '';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    bottom: 30%;
+    left: 0;
+    background-color: #008ffd;
+}
+
+.Projects:hover p{
+    animation: Rotate360 0.6s ease-out 0s forwards;
+    background: linear-gradient(-90deg, #57ffe3, #3baaff);
+    background-size: 100%;
+    height: auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@keyframes Rotate360{
+    from{
+        transform: rotateY(0deg);
+    } to {
+        transform: rotateY(360deg);
+    }
+}
+
+.ProjectWheel{
+    position:  sticky;
+    top: 30%;
+    display: inline-block;
+    margin-top: 5%;
+    height: 30vh;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: perspective(1000px);
+    animation-timeline: view(0% 70%);
+    animation-name: scrollRotate;
+    animation-fill-mode: both;
+}
+
+@keyframes scrollRotate{
+    0%{
+        transform: rotateY(0deg);
+    } 50% {
+        transform: rotateY(360deg);
+    } 51% {
+        transform: rotateY(360deg);
+    } 100%{
+        transform: rotateY(360deg);
+    }
+}
+
+.p1{
+    position: absolute;
+    top: 0;
+    margin-left: 40%;
+    transform: rotateY(0deg) translateZ(500px) ;
+}
+
+.p2{
+    position: absolute;
+    top: 0;
+    margin-left: 40%;
+    transform: rotateY(90deg) translateZ(500px);
+}
+
+.p3{
+    position: absolute;
+    top: 0;
+    margin-left: 40%;
+    transform: rotateY(180deg) translateZ(500px);
+}
+
+.p4{
+    position: absolute;
+    top: 0;
+    margin-left: 40%;
+    transform: rotateY(270deg) translateZ(500px);
+}

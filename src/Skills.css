@@ -1,0 +1,105 @@
+@keyframes midBlur{
+    0%{
+        filter: blur(20px);
+    }60%, 65%{
+        filter: blur(0px);
+    } 100% {
+        filter: blur(20px);
+    }
+}
+
+@keyframes SkillsOpaqueOut {
+    0%{
+        opacity: 0;
+        transform: translateY(200px) scale(0.3);
+    } 99%{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    } 100% {
+        opacity: 0;
+        transform: translateY(0px) scale(1);
+    }
+}
+
+#Skills{
+    color: #ffffff;
+    display: inline-block;
+    position: sticky;
+    top: 150px;
+    margin-left: 75%;
+    /* animation-timeline: view(0% -250%); */
+    animation-timeline: view(550% -90%);
+    animation-name: SkillsOpaqueOut;
+    animation-fill-mode: both;
+}
+
+.SkillGroups{
+    position: relative;
+    display: block;
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    line-height: 50px;
+    font-style: normal;
+    color: #ffffff;
+    margin-left: -15%;
+    text-align: center;
+    font-size: 45px;
+    animation-timeline: view();
+    animation-name: midBlur;
+    animation-fill-mode: both;
+}
+
+.SkillHeader{
+    color: rgb(51, 180, 245);
+    font-size: 70px;
+    font-weight: 400;
+}
+
+@media (max-width:1450px){
+    .SkillGroups{
+        font-size: 30px;
+        top: 40%;
+    }
+
+    .SkillHeader{
+        font-size: 40px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width:950px){
+    .SkillGroups{
+        font-size: 20px;
+        top: 40%;
+    }
+
+    .SkillHeader{
+        font-size: 30px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width:700px){
+    .SkillGroups{
+        font-size: 15px;
+        top: 40%;
+    }
+
+    .SkillHeader{
+        font-size: 20px;
+        font-weight: 400;
+    }
+}
+
+@media (max-width:450px){
+    .SkillGroups{
+        font-size: 13px;
+        top: 40%;
+    }
+
+    .SkillHeader{
+        font-size: 15px;
+        font-weight: 400;
+    }
+}
